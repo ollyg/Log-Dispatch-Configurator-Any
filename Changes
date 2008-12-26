@@ -1,0 +1,5 @@
+liblog-dispatch-configurator-any-perl (1.0001) UNRELEASED; urgency=low
+
+  * Initial release.
+
+ -- Oliver Gorwits <oliver.gorwits@oucs.ox.ac.uk>  Fri, 26 Dec 2008 16:08:31 +0000
