@@ -1,0 +1,25 @@
+Changes
+inc/Module/Install.pm
+inc/Module/Install/Base.pm
+inc/Module/Install/Can.pm
+inc/Module/Install/Fetch.pm
+inc/Module/Install/Makefile.pm
+inc/Module/Install/Metadata.pm
+inc/Module/Install/Win32.pm
+inc/Module/Install/WriteAll.pm
+INSTALL
+lib/Log/Dispatch/Configurator/Any.pm
+Makefile.PL
+MANIFEST			This list of files
+META.yml
+README
+script/ptee
+t/10-load.t
+t/20-file.t
+t/21-not-hashref-in-file.t
+t/30-hashref.t
+t/31-not-hashref.t
+t/cfg_file.ini
+t/cfg_file_bad.yml
+t/pod-coverage.t
+t/pod.t
