@@ -7,7 +7,7 @@ use base 'Log::Dispatch::Configurator';
 use Config::Any;
 use Carp;
 
-our $VERSION = '1.0001';
+our $VERSION = '1.0002';
 $VERSION = eval $VERSION; # numify for warning-free dev releases
 # $Id$
 
@@ -82,7 +82,7 @@ Log::Dispatch::Configurator::Any - Configurator implementation with Config::Any
 
 =head1 VERSION
 
-This document refers to version 1.0001 of Log::Dispatch::Configurator::Any
+This document refers to version 1.0002 of Log::Dispatch::Configurator::Any
 
 =head1 PURPOSE
 
@@ -192,6 +192,12 @@ C<dispatchers> value will automatically be promoted to a list. In other words:
 If you want more than one dispatcher, you then need to use a config file
 format which supports these lists natively, I'm afraid. A good suggestion
 might be YAML.
+
+=head1 THANKS
+
+My thanks to C<miyagawa> for writing Log::Dispatch::Config, from where I also took
+some tests. Also thanks to Florian Merges for his YAML Configurator, which was
+a useful example and saved me much time.
 
 =head1 AUTHOR
 

@@ -3,7 +3,7 @@ NAME
     Config::Any
 
 VERSION
-    This document refers to version 1.0001 of
+    This document refers to version 1.0002 of
     Log::Dispatch::Configurator::Any
 
 PURPOSE
@@ -111,6 +111,11 @@ USAGE
     If you want more than one dispatcher, you then need to use a config file
     format which supports these lists natively, I'm afraid. A good
     suggestion might be YAML.
+
+THANKS
+    My thanks to "miyagawa" for writing Log::Dispatch::Config, from where I
+    also took some tests. Also thanks to Florian Merges for his YAML
+    Configurator, which was a useful example and saved me much time.
 
 AUTHOR
     Oliver Gorwits "<oliver.gorwits@oucs.ox.ac.uk>"

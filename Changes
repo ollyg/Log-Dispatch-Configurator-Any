@@ -1,3 +1,11 @@
+liblog-dispatch-configurator-any-perl (1.0002) UNRELEASED; urgency=low
+
+  * Fix to ptee docs so the YAML is actually valid YAML
+  * Add examples dir with that YAML config
+  * Add THANKS section to pod
+
+ -- Oliver Gorwits <oliver.gorwits@oucs.ox.ac.uk>  Fri, 26 Dec 2008 21:50:40 +0000
+
 liblog-dispatch-configurator-any-perl (1.0001) UNRELEASED; urgency=low
 
   * Initial release.
