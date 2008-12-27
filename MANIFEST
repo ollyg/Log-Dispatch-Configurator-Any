@@ -24,3 +24,5 @@ t/cfg_file.ini
 t/cfg_file_bad.yml
 t/pod-coverage.t
 t/pod.t
+t/cfg_file.ini
+t/cfg_file_bad.yml

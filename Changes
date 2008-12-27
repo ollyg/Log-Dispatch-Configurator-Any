@@ -1,3 +1,9 @@
+liblog-dispatch-configurator-any-perl (1.0003) UNRELEASED; urgency=low
+
+  * Fix MANIFEST to include test config files 
+
+ -- Oliver Gorwits <oliver.gorwits@oucs.ox.ac.uk>  Sat, 27 Dec 2008 12:41:05 +0000
+
 liblog-dispatch-configurator-any-perl (1.0002) UNRELEASED; urgency=low
 
   * Fix to ptee docs so the YAML is actually valid YAML
