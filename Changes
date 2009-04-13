@@ -1,3 +1,10 @@
+liblog-dispatch-configurator-any-perl (1.0004) UNRELEASED; urgency=low
+
+  * stupid-head, I had flatten_to_hash on but was still checking for ARRAY
+  * fixes to test plans, and YAML::Tiny tests skip if missing
+
+ -- Oliver Gorwits <oliver.gorwits@oucs.ox.ac.uk>  Mon, 13 Apr 2009 02:14:45 +0100
+
 liblog-dispatch-configurator-any-perl (1.0003) UNRELEASED; urgency=low
 
   * Fix MANIFEST to include test config files 

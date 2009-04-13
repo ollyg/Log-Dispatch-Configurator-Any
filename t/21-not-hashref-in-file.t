@@ -12,5 +12,5 @@ SKIP: {
     ok(-f $cfg_file, "Config exists");
     
     eval{ Log::Dispatch::Configurator::Any->new($cfg_file) };
-    like($@, qr/does not build a Hash/);
+    like($@, qr/does not build a Hash/, 'does not build a Hash');
 }

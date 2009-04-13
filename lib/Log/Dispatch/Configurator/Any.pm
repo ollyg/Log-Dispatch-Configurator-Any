@@ -7,7 +7,7 @@ use base 'Log::Dispatch::Configurator';
 use Config::Any;
 use Carp;
 
-our $VERSION = '1.0003';
+our $VERSION = '1.0004';
 $VERSION = eval $VERSION; # numify for warning-free dev releases
 # $Id$
 
@@ -34,14 +34,14 @@ sub parse_file {
     my $self = shift;
     my $file = $self->{'file'};
 
-    my $config = Config::Any->load_files({
+    my $config = eval{ Config::Any->load_files({
         files => [$file],
         use_ext => 1,
         flatten_to_hash => 1,
-    })->[0]->{$file};
+    })->{$file} };
 
     croak "Config '$file' does not build a Hash"
-        unless (ref $config eq 'HASH');
+        if $@ or (ref $config ne 'HASH');
     $self->{'_config'} = $config;
 }
 
@@ -82,7 +82,7 @@ Log::Dispatch::Configurator::Any - Configurator implementation with Config::Any
 
 =head1 VERSION
 
-This document refers to version 1.0003 of Log::Dispatch::Configurator::Any
+This document refers to version 1.0004 of Log::Dispatch::Configurator::Any
 
 =head1 PURPOSE
 
