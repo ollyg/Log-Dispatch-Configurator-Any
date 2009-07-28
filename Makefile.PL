@@ -7,7 +7,7 @@ all_from    'lib/Log/Dispatch/Configurator/Any.pm';
 install_script  'ptee';
 
 requires    'Log::Dispatch::Config' => 0;
-requires    'Config::Any' => 0;
+requires    'Config::Any' => '0.15';
 
 recommends  'Config::Tiny' => 0;
 

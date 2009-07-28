@@ -7,7 +7,7 @@ use base 'Log::Dispatch::Configurator';
 use Config::Any;
 use Carp;
 
-our $VERSION = '1.0004';
+our $VERSION = '1.0005';
 $VERSION = eval $VERSION; # numify for warning-free dev releases
 # $Id$
 
@@ -82,7 +82,7 @@ Log::Dispatch::Configurator::Any - Configurator implementation with Config::Any
 
 =head1 VERSION
 
-This document refers to version 1.0004 of Log::Dispatch::Configurator::Any
+This document refers to version 1.0005 of Log::Dispatch::Configurator::Any
 
 =head1 PURPOSE
 
