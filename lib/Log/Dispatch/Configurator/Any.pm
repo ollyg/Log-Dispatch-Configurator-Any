@@ -1,4 +1,7 @@
 package Log::Dispatch::Configurator::Any;
+BEGIN {
+  $Log::Dispatch::Configurator::Any::VERSION = '1.110690';
+}
 
 use strict;
 use warnings FATAL => 'all';
@@ -6,10 +9,6 @@ use warnings FATAL => 'all';
 use base 'Log::Dispatch::Configurator';
 use Config::Any;
 use Carp;
-
-our $VERSION = '1.0005';
-$VERSION = eval $VERSION; # numify for warning-free dev releases
-# $Id$
 
 sub new {
     my($class, $file) = @_;
@@ -74,7 +73,12 @@ sub get_attrs {
 
 1;
 
+
+# ABSTRACT: Configurator implementation with Config::Any
+
+
 __END__
+=pod
 
 =head1 NAME
 
@@ -82,12 +86,7 @@ Log::Dispatch::Configurator::Any - Configurator implementation with Config::Any
 
 =head1 VERSION
 
-This document refers to version 1.0005 of Log::Dispatch::Configurator::Any
-
-=head1 PURPOSE
-
-Use this module in combination with L<Log::Dispatch::Config> to allow many
-formats of configuration file to be loaded, via the L<Config::Any> module.
+version 1.110690
 
 =head1 SYNOPSIS
 
@@ -134,6 +133,11 @@ is AppConfig.
 This module plugs in to Log::Dispatch::Config and allows the use of other file
 formats, in fact any format supported by the L<Config::Any> module. As a bonus
 you can also pass in a configuration data structure instead of a file name.
+
+=head1 PURPOSE
+
+Use this module in combination with L<Log::Dispatch::Config> to allow many
+formats of configuration file to be loaded, via the L<Config::Any> module.
 
 =head1 USAGE
 
@@ -201,14 +205,14 @@ a useful example and saved me much time.
 
 =head1 AUTHOR
 
-Oliver Gorwits C<< <oliver.gorwits@oucs.ox.ac.uk> >>
+Oliver Gorwits <oliver@cpan.org>
 
-=head1 COPYRIGHT & LICENSE
+=head1 COPYRIGHT AND LICENSE
 
-Copyright (c) The University of Oxford 2008.
+This software is copyright (c) 2011 by University of Oxford.
 
-This library is free software; you can redistribute it and/or modify it under
-the same terms as Perl itself.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
 

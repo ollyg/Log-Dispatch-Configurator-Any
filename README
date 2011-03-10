@@ -3,12 +3,7 @@ NAME
     Config::Any
 
 VERSION
-    This document refers to version 1.0005 of
-    Log::Dispatch::Configurator::Any
-
-PURPOSE
-    Use this module in combination with Log::Dispatch::Config to allow many
-    formats of configuration file to be loaded, via the Config::Any module.
+    version 1.110690
 
 SYNOPSIS
     In the traditional Log::Dispatch::Config way:
@@ -54,6 +49,10 @@ DESCRIPTION
     other file formats, in fact any format supported by the Config::Any
     module. As a bonus you can also pass in a configuration data structure
     instead of a file name.
+
+PURPOSE
+    Use this module in combination with Log::Dispatch::Config to allow many
+    formats of configuration file to be loaded, via the Config::Any module.
 
 USAGE
     Follow the examples in the "SYNOPSIS". If you are using an external
@@ -118,11 +117,11 @@ THANKS
     Configurator, which was a useful example and saved me much time.
 
 AUTHOR
-    Oliver Gorwits "<oliver.gorwits@oucs.ox.ac.uk>"
+    Oliver Gorwits <oliver@cpan.org>
 
-COPYRIGHT & LICENSE
-    Copyright (c) The University of Oxford 2008.
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2011 by University of Oxford.
 
-    This library is free software; you can redistribute it and/or modify it
-    under the same terms as Perl itself.
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
 

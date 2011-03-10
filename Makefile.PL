@@ -1,19 +1,59 @@
-use inc::Module::Install 0.67;
-perl_version '5.008001';
-  
-name        'Log-Dispatch-Configurator-Any';
-all_from    'lib/Log/Dispatch/Configurator/Any.pm';
 
-install_script  'ptee';
+use strict;
+use warnings;
 
-requires    'Log::Dispatch::Config' => 0;
-requires    'Config::Any' => '0.15';
 
-recommends  'Config::Tiny' => 0;
 
-test_requires  'Test::More' => 0;
-test_requires  'Test::Pod' => 0;
-test_requires  'Test::Pod::Coverage' => 0;
+use ExtUtils::MakeMaker 6.31;
 
-WriteAll;
+
+
+my %WriteMakefileArgs = (
+  'ABSTRACT' => 'Configurator implementation with Config::Any',
+  'AUTHOR' => 'Oliver Gorwits <oliver@cpan.org>',
+  'BUILD_REQUIRES' => {
+    'Config::Tiny' => '0',
+    'Log::Dispatch::Config' => '0',
+    'Test::More' => '0',
+    'YAML::Tiny' => '0'
+  },
+  'CONFIGURE_REQUIRES' => {
+    'ExtUtils::MakeMaker' => '6.31'
+  },
+  'DISTNAME' => 'Log-Dispatch-Configurator-Any',
+  'EXE_FILES' => [],
+  'LICENSE' => 'perl',
+  'NAME' => 'Log::Dispatch::Configurator::Any',
+  'PREREQ_PM' => {
+    'Carp' => '0',
+    'Config::Any' => '0.15',
+    'Log::Dispatch' => '2.23',
+    'Log::Dispatch::Configurator' => '0'
+  },
+  'VERSION' => '1.110690',
+  'test' => {
+    'TESTS' => 't/*.t'
+  }
+);
+
+
+unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
+  my $br = delete $WriteMakefileArgs{BUILD_REQUIRES};
+  my $pp = $WriteMakefileArgs{PREREQ_PM};
+  for my $mod ( keys %$br ) {
+    if ( exists $pp->{$mod} ) {
+      $pp->{$mod} = $br->{$mod} if $br->{$mod} > $pp->{$mod};
+    }
+    else {
+      $pp->{$mod} = $br->{$mod};
+    }
+  }
+}
+
+delete $WriteMakefileArgs{CONFIGURE_REQUIRES}
+  unless eval { ExtUtils::MakeMaker->VERSION(6.52) };
+
+WriteMakefile(%WriteMakefileArgs);
+
+
 

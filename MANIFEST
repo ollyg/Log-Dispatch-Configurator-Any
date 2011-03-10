@@ -1,19 +1,12 @@
 Changes
-examples/ptee.yml
-inc/Module/Install.pm
-inc/Module/Install/Base.pm
-inc/Module/Install/Can.pm
-inc/Module/Install/Fetch.pm
-inc/Module/Install/Makefile.pm
-inc/Module/Install/Metadata.pm
-inc/Module/Install/Win32.pm
-inc/Module/Install/WriteAll.pm
-INSTALL
-lib/Log/Dispatch/Configurator/Any.pm
-Makefile.PL
-MANIFEST			This list of files
+LICENSE
+MANIFEST
+META.json
 META.yml
+Makefile.PL
 README
+examples/ptee.yml
+lib/Log/Dispatch/Configurator/Any.pm
 script/ptee
 t/10-load.t
 t/20-file.t

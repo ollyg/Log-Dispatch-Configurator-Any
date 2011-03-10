@@ -1,3 +1,8 @@
+1.110690  2011-03-10 20:22:36 Europe/London
+
+  * port to Dist::Zilla
+  * add dependency on Log::Dispatch 2.23 (rt.cpan #49103)
+
 liblog-dispatch-configurator-any-perl (1.0005) UNRELEASED; urgency=low
 
   * Set min version of Config::Any to 0.15 so we get flatten_to_hash, use_ext 
