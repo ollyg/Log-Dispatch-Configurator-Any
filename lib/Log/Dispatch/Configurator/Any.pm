@@ -7,10 +7,6 @@ use base 'Log::Dispatch::Configurator';
 use Config::Any;
 use Carp;
 
-our $VERSION = '1.0005';
-$VERSION = eval $VERSION; # numify for warning-free dev releases
-# $Id$
-
 sub new {
     my($class, $file) = @_;
     my $self = {};
@@ -74,15 +70,8 @@ sub get_attrs {
 
 1;
 
-__END__
 
-=head1 NAME
-
-Log::Dispatch::Configurator::Any - Configurator implementation with Config::Any
-
-=head1 VERSION
-
-This document refers to version 1.0005 of Log::Dispatch::Configurator::Any
+# ABSTRACT: Configurator implementation with Config::Any
 
 =head1 PURPOSE
 
@@ -199,16 +188,4 @@ My thanks to C<miyagawa> for writing Log::Dispatch::Config, from where I also to
 some tests. Also thanks to Florian Merges for his YAML Configurator, which was
 a useful example and saved me much time.
 
-=head1 AUTHOR
-
-Oliver Gorwits C<< <oliver.gorwits@oucs.ox.ac.uk> >>
-
-=head1 COPYRIGHT & LICENSE
-
-Copyright (c) The University of Oxford 2008.
-
-This library is free software; you can redistribute it and/or modify it under
-the same terms as Perl itself.
-
 =cut
-
