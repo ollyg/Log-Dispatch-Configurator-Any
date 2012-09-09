@@ -73,10 +73,14 @@ sub get_attrs {
 
 # ABSTRACT: Configurator implementation with Config::Any
 
+=begin :prelude
+
 =head1 PURPOSE
 
 Use this module in combination with L<Log::Dispatch::Config> to allow many
 formats of configuration file to be loaded, via the L<Config::Any> module.
+
+=end :prelude
 
 =head1 SYNOPSIS
 
