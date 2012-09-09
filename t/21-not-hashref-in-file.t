@@ -5,8 +5,8 @@ use Log::Dispatch::Config;
 use Log::Dispatch::Configurator::Any;
 
 SKIP: {
-    eval { require YAML::Tiny };
-    skip 'no YAML::Tiny installed', 2 if $@;
+    eval { require YAML::XS };
+    skip 'no YAML::XS installed', 2 if $@;
 
     my $cfg_file = 't/cfg_file_bad.yml';
     ok(-f $cfg_file, "Config exists");

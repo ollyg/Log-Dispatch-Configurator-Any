@@ -3,18 +3,22 @@ NAME
     Config::Any
 
 VERSION
-    version 1.110690
+    version 1.122530
+
+PURPOSE
+    Use this module in combination with Log::Dispatch::Config to allow many
+    formats of configuration file to be loaded, via the Config::Any module.
 
 SYNOPSIS
     In the traditional Log::Dispatch::Config way:
 
      use Log::Dispatch::Config; # loads Log::Dispatch
      use Log::Dispatch::Configurator::Any;
-      
- my $config = Log::Dispatch::Configurator::Any->new('log.yml');
+  
+     my $config = Log::Dispatch::Configurator::Any->new('log.yml');
      Log::Dispatch::Config->configure($config);
-      
- # nearby piece of code
+  
+     # nearby piece of code
      my $log = Log::Dispatch::Config->instance;
      $log->alert('Hello, world!');
 
@@ -22,19 +26,19 @@ SYNOPSIS
 
      use Log::Dispatch::Config; # loads Log::Dispatch
      use Log::Dispatch::Configurator::Any;
-      
- my $confhash = {
+  
+     my $confhash = {
          dispatchers => ['screen]',
          screen = {
              class => 'Log::Dispatch::Screen',
              min_level => 'debug',
          },
      };
-      
- my $config = Log::Dispatch::Configurator::Any->new($confhash);
+  
+     my $config = Log::Dispatch::Configurator::Any->new($confhash);
      Log::Dispatch::Config->configure($config);
-      
- # nearby piece of code
+  
+     # nearby piece of code
      my $log = Log::Dispatch::Config->instance;
      $log->alert('Hello, world!');
 
@@ -49,10 +53,6 @@ DESCRIPTION
     other file formats, in fact any format supported by the Config::Any
     module. As a bonus you can also pass in a configuration data structure
     instead of a file name.
-
-PURPOSE
-    Use this module in combination with Log::Dispatch::Config to allow many
-    formats of configuration file to be loaded, via the Config::Any module.
 
 USAGE
     Follow the examples in the "SYNOPSIS". If you are using an external
@@ -74,12 +74,12 @@ USAGE
              min_level => 'debug',
          },
      };
-      
- my $config_file = '/etc/myapp_logging.conf';
+  
+     my $config_file = '/etc/myapp_logging.conf';
      my $config = $ENV{MYAPP_LOGGING_CONFIG} || $ARGV[0] ||
          ( -e $config_file ? $config_file : $defaults);
-     
- Log::Dispatch::Config->configure_and_watch(
+ 
+     Log::Dispatch::Config->configure_and_watch(
          Log::Dispatch::Configurator::Any->new($config) );
      my $dispatcher = Log::Dispatch::Config->instance;
 
@@ -100,11 +100,11 @@ USAGE
 
      # myapp.ini
      dispatchers = screen
-     
- # this becomes a config of:
+ 
+     # this becomes a config of:
      $config = { dispatchers => 'screen', ... };
-     
- # so this module promotes it to:
+ 
+     # so this module promotes it to:
      $config = { dispatchers => ['screen'], ... };
 
     If you want more than one dispatcher, you then need to use a config file
@@ -120,7 +120,7 @@ AUTHOR
     Oliver Gorwits <oliver@cpan.org>
 
 COPYRIGHT AND LICENSE
-    This software is copyright (c) 2011 by University of Oxford.
+    This software is copyright (c) 2012 by University of Oxford.
 
     This is free software; you can redistribute it and/or modify it under
     the same terms as the Perl 5 programming language system itself.

@@ -1,3 +1,8 @@
+1.122530  2012-09-09 16:05:25 Europe/London
+
+  * POD fix
+  * Use YAML::XS instead of YAML::Tiny for test
+
 1.110690  2011-03-10 20:22:36 Europe/London
 
   * port to Dist::Zilla

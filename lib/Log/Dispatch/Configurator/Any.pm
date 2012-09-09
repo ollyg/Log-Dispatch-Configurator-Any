@@ -1,6 +1,6 @@
 package Log::Dispatch::Configurator::Any;
-BEGIN {
-  $Log::Dispatch::Configurator::Any::VERSION = '1.110690';
+{
+  $Log::Dispatch::Configurator::Any::VERSION = '1.122530';
 }
 
 use strict;
@@ -86,7 +86,12 @@ Log::Dispatch::Configurator::Any - Configurator implementation with Config::Any
 
 =head1 VERSION
 
-version 1.110690
+version 1.122530
+
+=head1 PURPOSE
+
+Use this module in combination with L<Log::Dispatch::Config> to allow many
+formats of configuration file to be loaded, via the L<Config::Any> module.
 
 =head1 SYNOPSIS
 
@@ -133,11 +138,6 @@ is AppConfig.
 This module plugs in to Log::Dispatch::Config and allows the use of other file
 formats, in fact any format supported by the L<Config::Any> module. As a bonus
 you can also pass in a configuration data structure instead of a file name.
-
-=head1 PURPOSE
-
-Use this module in combination with L<Log::Dispatch::Config> to allow many
-formats of configuration file to be loaded, via the L<Config::Any> module.
 
 =head1 USAGE
 
@@ -209,7 +209,7 @@ Oliver Gorwits <oliver@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by University of Oxford.
+This software is copyright (c) 2012 by University of Oxford.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

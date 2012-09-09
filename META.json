@@ -4,7 +4,7 @@
       "Oliver Gorwits <oliver@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.200000, CPAN::Meta::Converter version 2.102400",
+   "generated_by" : "Dist::Zilla version 4.200013, CPAN::Meta::Converter version 2.112150",
    "license" : [
       "perl_5"
    ],
@@ -16,7 +16,7 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "6.31"
+            "ExtUtils::MakeMaker" : "6.30"
          }
       },
       "runtime" : {
@@ -24,7 +24,8 @@
             "Carp" : 0,
             "Config::Any" : "0.15",
             "Log::Dispatch" : "2.23",
-            "Log::Dispatch::Configurator" : 0
+            "Log::Dispatch::Configurator" : 0,
+            "Sys::Syslog" : "0.25"
          }
       },
       "test" : {
@@ -32,7 +33,7 @@
             "Config::Tiny" : 0,
             "Log::Dispatch::Config" : 0,
             "Test::More" : 0,
-            "YAML::Tiny" : 0
+            "YAML::XS" : 0
          }
       }
    },
@@ -48,6 +49,6 @@
          "web" : "https://github.com/ollyg/Log-Dispatch-Configurator-Any"
       }
    },
-   "version" : "1.110690"
+   "version" : "1.122530"
 }
 

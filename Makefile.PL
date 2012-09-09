@@ -4,7 +4,7 @@ use warnings;
 
 
 
-use ExtUtils::MakeMaker 6.31;
+use ExtUtils::MakeMaker 6.30;
 
 
 
@@ -15,10 +15,10 @@ my %WriteMakefileArgs = (
     'Config::Tiny' => '0',
     'Log::Dispatch::Config' => '0',
     'Test::More' => '0',
-    'YAML::Tiny' => '0'
+    'YAML::XS' => '0'
   },
   'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.31'
+    'ExtUtils::MakeMaker' => '6.30'
   },
   'DISTNAME' => 'Log-Dispatch-Configurator-Any',
   'EXE_FILES' => [],
@@ -28,9 +28,10 @@ my %WriteMakefileArgs = (
     'Carp' => '0',
     'Config::Any' => '0.15',
     'Log::Dispatch' => '2.23',
-    'Log::Dispatch::Configurator' => '0'
+    'Log::Dispatch::Configurator' => '0',
+    'Sys::Syslog' => '0.25'
   },
-  'VERSION' => '1.110690',
+  'VERSION' => '1.122530',
   'test' => {
     'TESTS' => 't/*.t'
   }
