@@ -14,8 +14,7 @@ my %WriteMakefileArgs = (
   'BUILD_REQUIRES' => {
     'Config::Tiny' => '0',
     'Log::Dispatch::Config' => '0',
-    'Test::More' => '0',
-    'YAML::XS' => '0'
+    'Test::More' => '0'
   },
   'CONFIGURE_REQUIRES' => {
     'ExtUtils::MakeMaker' => '6.30'
@@ -31,7 +30,7 @@ my %WriteMakefileArgs = (
     'Log::Dispatch::Configurator' => '0',
     'Sys::Syslog' => '0.25'
   },
-  'VERSION' => '1.122530',
+  'VERSION' => '1.122640',
   'test' => {
     'TESTS' => 't/*.t'
   }

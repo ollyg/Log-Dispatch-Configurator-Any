@@ -1,6 +1,6 @@
 package Log::Dispatch::Configurator::Any;
 {
-  $Log::Dispatch::Configurator::Any::VERSION = '1.122530';
+  $Log::Dispatch::Configurator::Any::VERSION = '1.122640';
 }
 
 use strict;
@@ -86,7 +86,7 @@ Log::Dispatch::Configurator::Any - Configurator implementation with Config::Any
 
 =head1 VERSION
 
-version 1.122530
+version 1.122640
 
 =head1 PURPOSE
 

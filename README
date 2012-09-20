@@ -3,7 +3,7 @@ NAME
     Config::Any
 
 VERSION
-    version 1.122530
+    version 1.122640
 
 PURPOSE
     Use this module in combination with Log::Dispatch::Config to allow many

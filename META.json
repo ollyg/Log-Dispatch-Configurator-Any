@@ -32,8 +32,7 @@
          "requires" : {
             "Config::Tiny" : 0,
             "Log::Dispatch::Config" : 0,
-            "Test::More" : 0,
-            "YAML::XS" : 0
+            "Test::More" : 0
          }
       }
    },
@@ -49,6 +48,6 @@
          "web" : "https://github.com/ollyg/Log-Dispatch-Configurator-Any"
       }
    },
-   "version" : "1.122530"
+   "version" : "1.122640"
 }
 
