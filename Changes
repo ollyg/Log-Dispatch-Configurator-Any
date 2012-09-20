@@ -1,5 +1,7 @@
 {{$NEXT}}
 
+  * Remove YAML::XS dependency from requirements
+
 1.122530  2012-09-09 16:05:25 Europe/London
 
   * POD fix
